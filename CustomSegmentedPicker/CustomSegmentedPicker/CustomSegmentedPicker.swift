@@ -4,9 +4,9 @@ struct CustomSegmentedPicker<SelectionValue, Content>: View where SelectionValue
     @State private var initial = true
     @Namespace private var pickerTransition
     @Binding var selection: SelectionValue
-    @Binding var items: [SelectionValue]
-    @Binding var badgeCase: [SelectionValue]
-
+    
+    private var items: [SelectionValue]
+    private var badgeCase: [SelectionValue]
     private var backgroundColor: Color
     private var selectedSegmentTintColor: Color
     private var badgeColor: Color
@@ -15,8 +15,8 @@ struct CustomSegmentedPicker<SelectionValue, Content>: View where SelectionValue
 
     init(
         selection: Binding<SelectionValue>,
-        items: Binding<[SelectionValue]>,
-        badgeCase: Binding<[SelectionValue]>,
+        items: [SelectionValue],
+        badgeCase: [SelectionValue],
         backgroundColor: Color = Color(UIColor.systemGray5),
         selectedSegmentTintColor: Color = Color(UIColor.link),
         badgeColor: Color = .red,
@@ -24,8 +24,8 @@ struct CustomSegmentedPicker<SelectionValue, Content>: View where SelectionValue
         @ViewBuilder content: @escaping (SelectionValue) -> Content
     ) {
         self._selection = selection
-        self._items = items
-        self._badgeCase = badgeCase
+        self.items = items
+        self.badgeCase = badgeCase
         self.backgroundColor = backgroundColor
         self.selectedSegmentTintColor = selectedSegmentTintColor
         self.badgeColor = badgeColor
@@ -82,8 +82,8 @@ struct CustomSegmentedPicker<SelectionValue, Content>: View where SelectionValue
     let tabs: [TabType] = TabType.allCases
     return CustomSegmentedPicker(
         selection: .constant(TabType.normal),
-        items: .constant(tabs),
-        badgeCase: .constant([.normal, .completed]),
+        items: tabs,
+        badgeCase: [.normal, .completed],
         backgroundColor: .white,
         selectedSegmentTintColor: .cyan,
         badgeColor: .red,
