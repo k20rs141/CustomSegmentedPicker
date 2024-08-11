@@ -18,7 +18,7 @@ struct ContentView: View {
                 items: items,
                 badgeCase: badgeCase,
                 backgroundColor: Color(.systemGray5),
-                selectedSegmentTintColor: .blue,
+                selectedSegmentTintColor: Color(.tintColor),
                 badgeColor: .red,
                 segmentedWidth: UIScreen.main.bounds.width * 0.95
             ) { tab in
@@ -34,7 +34,7 @@ struct ContentView: View {
                 badgeCase: badgeCase,
                 fixed: true,
                 backgroundColor: Color(.systemGray5),
-                selectedSegmentTintColor: .blue,
+                selectedSegmentTintColor: Color(.tintColor),
                 badgeColor: .red,
                 geoWidth: UIScreen.main.bounds.width,
                 borderTop: true

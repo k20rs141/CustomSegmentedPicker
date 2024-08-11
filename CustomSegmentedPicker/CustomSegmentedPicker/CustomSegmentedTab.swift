@@ -19,7 +19,7 @@ struct CustomSegmentedTab<SelectionValue, Content>: View where SelectionValue: H
         badgeCase: [SelectionValue],
         fixed: Bool = true,
         backgroundColor: Color = Color(UIColor.systemGray5),
-        selectedSegmentTintColor: Color = Color(UIColor.link),
+        selectedSegmentTintColor: Color = Color(UIColor.tintColor),
         badgeColor: Color = .red,
         geoWidth: CGFloat,
         borderTop: Bool,
@@ -58,7 +58,7 @@ struct CustomSegmentedTab<SelectionValue, Content>: View where SelectionValue: H
                                     ZStack(alignment: .topTrailing) {
                                         content(tab)
                                             .font(Font.system(size: 18, weight: .semibold))
-                                            .foregroundColor(selection == tab ? selectedSegmentTintColor : Color(.systemGray))
+                                            .foregroundColor(selection == tab ? selectedSegmentTintColor : Color(UIColor.systemGray))
                                             .padding(.horizontal, 12)
                                             .padding(.vertical, 4)
                                         Circle()
@@ -104,7 +104,7 @@ struct CustomSegmentedTab<SelectionValue, Content>: View where SelectionValue: H
         tabs: tabs,
         badgeCase: [.normal, .limitedTime],
         fixed: false,
-        backgroundColor: Color(.systemGray5),
+        backgroundColor: Color(UIColor.systemGray5),
         selectedSegmentTintColor: .blue,
         badgeColor: .red,
         geoWidth: UIScreen.main.bounds.width,

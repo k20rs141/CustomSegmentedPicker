@@ -18,7 +18,7 @@ struct CustomSegmentedPicker<SelectionValue, Content>: View where SelectionValue
         items: [SelectionValue],
         badgeCase: [SelectionValue],
         backgroundColor: Color = Color(UIColor.systemGray5),
-        selectedSegmentTintColor: Color = Color(UIColor.link),
+        selectedSegmentTintColor: Color = Color(UIColor.tintColor),
         badgeColor: Color = .red,
         segmentedWidth: CGFloat,
         @ViewBuilder content: @escaping (SelectionValue) -> Content
@@ -84,8 +84,8 @@ struct CustomSegmentedPicker<SelectionValue, Content>: View where SelectionValue
         selection: .constant(TabType.normal),
         items: tabs,
         badgeCase: [.normal, .completed],
-        backgroundColor: .white,
-        selectedSegmentTintColor: .cyan,
+        backgroundColor: Color(UIColor.systemGray5),
+        selectedSegmentTintColor: Color(UIColor.tintColor),
         badgeColor: .red,
         segmentedWidth: UIScreen.main.bounds.width * 0.95
     ) { tab in
