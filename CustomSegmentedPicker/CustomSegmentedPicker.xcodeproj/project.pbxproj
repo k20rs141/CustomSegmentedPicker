@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		896E95802C689A5D00199B15 /* CustomSegmentedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E957F2C689A5D00199B15 /* CustomSegmentedTab.swift */; };
 		89F7A6162C6273FF00194B5D /* CustomSegmentedPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7A6152C6273FF00194B5D /* CustomSegmentedPickerApp.swift */; };
 		89F7A6182C6273FF00194B5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7A6172C6273FF00194B5D /* ContentView.swift */; };
 		89F7A61A2C62740000194B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89F7A6192C62740000194B5D /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		896E957F2C689A5D00199B15 /* CustomSegmentedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedTab.swift; sourceTree = "<group>"; };
 		89F7A6122C6273FF00194B5D /* CustomSegmentedPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomSegmentedPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F7A6152C6273FF00194B5D /* CustomSegmentedPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedPickerApp.swift; sourceTree = "<group>"; };
 		89F7A6172C6273FF00194B5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				89F7A6152C6273FF00194B5D /* CustomSegmentedPickerApp.swift */,
 				89F7A6172C6273FF00194B5D /* ContentView.swift */,
+				896E957F2C689A5D00199B15 /* CustomSegmentedTab.swift */,
 				89F7A6232C6274DA00194B5D /* CustomSegmentedPicker.swift */,
 				89F7A6192C62740000194B5D /* Assets.xcassets */,
 				89F7A61B2C62740000194B5D /* Preview Content */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F7A6182C6273FF00194B5D /* ContentView.swift in Sources */,
+				896E95802C689A5D00199B15 /* CustomSegmentedTab.swift in Sources */,
 				89F7A6162C6273FF00194B5D /* CustomSegmentedPickerApp.swift in Sources */,
 				89F7A6242C6274DA00194B5D /* CustomSegmentedPicker.swift in Sources */,
 			);
