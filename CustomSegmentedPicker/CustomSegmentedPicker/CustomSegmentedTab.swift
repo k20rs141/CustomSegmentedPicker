@@ -61,9 +61,11 @@ struct CustomSegmentedTab<SelectionValue, Content>: View where SelectionValue: H
                                             .foregroundColor(selection == tab ? selectedSegmentTintColor : Color(UIColor.systemGray))
                                             .padding(.horizontal, 12)
                                             .padding(.vertical, 4)
-                                        Circle()
-                                            .fill(badgeColor)
-                                            .frame(width: 10, height: 10)
+                                        if selection != tab && badgeCase.contains(tab) {
+                                            Circle()
+                                                .fill(badgeColor)
+                                                .frame(width: 10, height: 10)
+                                        }
                                     }
                                     .frame(width: fixed ? (geoWidth / tabCount) : .none, height: 40)
 
