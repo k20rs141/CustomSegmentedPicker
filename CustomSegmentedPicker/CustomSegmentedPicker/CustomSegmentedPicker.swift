@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CustomSegmentedPicker<SelectionValue, Content>: View where SelectionValue: Hashable, Content: View {
-    @State private var initial = true
+    @State private var animation = false
     @Namespace private var pickerTransition
     @Binding var selection: SelectionValue
     
@@ -39,10 +39,7 @@ struct CustomSegmentedPicker<SelectionValue, Content>: View where SelectionValue
             ForEach(items, id: \.self) { tab in
                 Button {
                     selection = tab
-                    initial = false
-//                    withAnimation(.easeInOut(duration: 0.22)) {
-//                        selection = tab
-//                    }
+                    animation.toggle()
                 } label: {
                     ZStack(alignment: .topTrailing) {
                         content(tab)
@@ -65,7 +62,7 @@ struct CustomSegmentedPicker<SelectionValue, Content>: View where SelectionValue
         .background(
             RoundedRectangle(cornerRadius: 6)
                 .matchedGeometryEffect(id: selection, in: pickerTransition, isSource: false)
-                .animation(initial ? nil : .easeInOut(duration: 0.22), value: initial)
+                .animation(.easeInOut(duration: 0.22), value: animation)
                 .foregroundColor(selectedSegmentTintColor)
                 .shadow(color: .black.opacity(0.2), radius: 2)
         )
